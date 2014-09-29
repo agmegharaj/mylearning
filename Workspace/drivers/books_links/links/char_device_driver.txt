@@ -1,0 +1,52 @@
+http://learninglinuxkernel.in/your-first-driver-basic-char-driver/
+
+http://www.tldp.org/LDP/lkmpg/2.6/html/index.html
+for char drivers
+
+http://stackoverflow.com/questions/9411057/prevent-overwriting-to-write-function-for-char-driver-linux
+
+http://learninglinuxkernel.in/your-first-driver-basic-char-driver/
+
+http://www.freesoftwaremagazine.com/articles/drivers_linux
+
+http://www.linux.it/~rubini/docs/serial/
+
+http://developer.axis.com/old/documentation/old/software/linux/device_drivers-howto.html
+
+http://www.xatlantis.ch/education/linux_driver_example.html /*important*/
+
+ioctl calls
+
+http://linux.die.net/lkmpg/x892.html
+
+http://www.linuxforu.com/2011/08/io-control-in-linux/
+
+http://stackoverflow.com/questions/12128546/device-driver-ioctl-pass-int
+
+http://blackfin.uclinux.org/doku.php?id=linux-kernel:ioctls
+
+http://www.danielsprogramming.com/?p=265
+
+http://forum.kernelnewbies.org/read.php?12,1062,1161
+
+http://tuxthink.blogspot.in/2012/12/implementing-ioctl-call-for-kernel.html
+http://stackoverflow.com/questions/2099070/how-can-i-allocate-memory-in-the-linux-kernel-for-a-char-type-string
+
+
+good one for proc etc
+http://tuxthink.blogspot.in/p/kernel-related.html
+http://www.thegeekstuff.com/2012/04/create-proc-files/
+http://www.rt-embedded.com/blog/archives/creating-and-using-proc-files/
+http://www.linuxjournal.com/article/8381
+http://linux.die.net/lkmpg/x769.html
+
+spin locks
+
+
+
+
+
+
+
+
+

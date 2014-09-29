@@ -1,0 +1,11 @@
+#!/system/bin/sh
+sh -c 'logcat pppd:V *:S&'
+/system/bin/log -t pppd "ppp/ip-up script started"
+/system/bin/setprop net.dns1 "202.148.204.202"
+/system/bin/setprop net.dns2 "27.251.58.196"
+sh -c '/system/bin/getprop net.dns1'
+sh -c '/system/bin/getprop net.dns2'
+/system/bin/log -t pppd "DNS1 $DNS1"
+/system/bin/log -t pppd "DNS2 $DNS2"
+/system/bin/log -t pppd "ppp/ip-up script ended"
+

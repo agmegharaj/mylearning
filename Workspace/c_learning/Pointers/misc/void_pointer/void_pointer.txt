@@ -1,0 +1,146 @@
+So far my understaing on void pointer is as follows.
+
+When a pointer variable is declared using keyword void – it becomes a general purpose pointer variable. Address of any variable of any data type (char, int, float etc.)can be assigned to a void pointer variable.
+main()
+{
+    int *p;
+ 
+    void *vp;
+ 
+    vp=p;
+} 
+
+Since other data type pointer can be assigned to void pointer, so I used it in absolut_value(code shown below) function. To make a general function.
+
+
+I tried to write a simple C code which takes integer or float as a an argument and tries to make it +ve, if negative. I wrote the following code,
+-------------------------------------------------------------------------------------------------------------
+#include<stdio.h>
+
+void absolute_value ( void *j) // works if used float, obviously it must work but thats not my interest here.
+{
+	if ( *j < 0 )
+		*j = *j * (-1);
+
+}
+
+int main()
+{
+	int i = 40;
+	float f = -40;
+	printf("print intiger i = %d \n",i);
+	printf("print float f = %f \n",f);
+	absolute_value(&i);
+	absolute_value(&f);
+	printf("print intiger i = %d \n",i);
+	printf("print float f = %f \n",f);
+	return 0;
+}	
+-----------------------------------------------------------------------------------------------------------------
+But I was getting error, so I came to know my understanding with void pointer is not correct :(. So now I will move towards to collect points why is that so.
+
+The things that i need to underatnd more on void pointers is that.
+
+void pointer we need to typecast the pointer variable to dereference it. This is because a void pointer has no data type associated with it. There is no way the compiler can know (or guess?) what type of data is pointed to by the void pointer. So to take the data pointed to by a void pointer we typecast it with the correct type of the data holded inside the void pointers location. 
+
+
+
+void main()
+
+{
+
+int a=10;
+
+float b=35.75;
+
+void *ptr; // Declaring a void pointer
+
+ptr=&a; // Assigning address of integer to void pointer.
+
+printf("The value of integer variable is= %d",*( (int*) ptr) );// (int*)ptr - is used for type casting. Where as *((int*)ptr) dereferences the typecasted void pointer variable.
+
+ptr=&b; // Assigning address of float to void pointer.
+
+printf("The value of float variable is= %f",*( (float*) ptr) );
+
+}
+
+
+A void pointer can be really useful if the programmer is not sure about the data type of data inputted by the end user. In such a case the programmer can use a void pointer to point to the location of the unknown data type. The program can be set in such a way to ask the user to inform the type of data and type casting can be performed according to the information inputted by the user. A code snippet is given below.
+
+void funct(void *a, int z)
+{
+if(z==1)
+printf("%d",*(int*)a); // If user inputs 1, then he means the data is an integer and type casting is done accordingly.
+else if(z==2)
+printf("%c",*(char*)a); // Typecasting for character pointer.
+else if(z==3)
+printf("%f",*(float*)a); // Typecasting for float pointer
+}
+
+Another important point you should keep in mind about void pointers is that – pointer arithmetic can not be performed in a void pointer. 
+
+void *ptr;
+
+int a;
+
+ptr=&a;
+
+ptr++; // This statement is invalid and will result in an error because 'ptr' is a void pointer variable.
+
+So now I understood what was my mistake. I am correcting the same.
+
+Refferences : 
+
+http://www.antoarts.com/void-pointers-in-c/
+
+http://www.circuitstoday.com/void-pointers-in-c.
+
+The New code is as shown below.
+
+-------------------------------------------------------------------------------------------------------------------------
+#include<stdio.h>
+#define INT 1
+#define FLOAT 2
+
+void absolute_value ( void *j, int *n)
+{
+	if ( *n == INT) {
+		if ( *((int*)j) < 0 )
+			*((int*)j) = *((int*)j) * (-1);
+	}
+	if ( *n == FLOAT ) {
+		if ( *((float*)j) < 0 )
+			*((float*)j) = *((float*)j) * (-1);
+	}
+}
+
+
+int main()
+{
+	int i = 0,n=0;
+	float f = 0;
+	printf("Press 1 to enter integer or 2 got float then enter the value to get absolute value\n");
+	scanf("%d",&n);
+	printf("\n");
+	if( n == 1) {
+		scanf("%d",&i);
+		printf("value entered before absolute function exec = %d \n",i);
+		absolute_value(&i,&n);
+		printf("value entered after absolute function exec = %d \n",i);
+	}
+	else if( n == 2) {
+		scanf("%f",&f);
+		printf("value entered before absolute function exec = %f \n",f);
+		absolute_value(&f,&n);
+		printf("value entered after absolute function exec = %f \n",f);
+	}
+	else
+	printf("unknown entry try again\n");
+	return 0;
+}	
+-------------------------------------------------------------------------------------------------------------------------------
+
+Thank you,
+A G Megharaj.
+

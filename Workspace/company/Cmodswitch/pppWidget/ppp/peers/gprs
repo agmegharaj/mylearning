@@ -1,0 +1,19 @@
+#460800
+ttyUSB3
+nodetach
+nocrtscts
+local
+defaultroute
+noipdefault
+usepeerdns
+ipcp-accept-local
+ipcp-accept-remote
+noccp
+novj
+nobsdcomp
+novjccomp
+nopcomp
+noaccomp
+mtu 1500
+mru 1500
+connect "/system/xbin/chat -E -V -t 50 -f /etc/ppp/chatScripts/connect.sh"

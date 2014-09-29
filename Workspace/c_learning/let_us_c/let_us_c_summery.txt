@@ -1,0 +1,40 @@
+what all to read and where are they, will be presented with a page numbers. this is with refference to let us C.
+
+inline to be read
+functions to pointers and function returning pointers.
+also to read stacks and functions from let us c
+swaping a variable without using extra variable
+volatile memory
+binding of structures
+also unions
+dma
+
+2)	hierrarchy of operators based on priority. p49
+	
+3)	While(1); // when added ; do nothing . p122 to explore much on this
+	p120 : in while condition can even be float.
+	for loops just see the two examples of mine.
+	break and continue p137,
+	do while p138
+	
+
+4)	p138 switch statement we need to add a break.
+	p158 using char as condition in switch statement also p159 read all the rules
+	goto in p162 read all the things with the examples
+	
+
+5)	function and stack in pointer in c at p519, p206 recursion
+
+6) 	read all the storage class and see the examples that i have worked before p240
+	
+	
+7) 	read full chapter :
+	check what if two macro with same name are being used (done, if macro redefined it will take the latest redefined value)
+
+12 & 13) 	to read along with the projects worked at nowon.
+
+14)	read the full text.
+
+
+
+ 

@@ -1,0 +1,1 @@
+cmd_/home/nowon/drivers/examples/scull/scull.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-3.2.0-29-generic/scripts/module-common.lds --build-id  -o /home/nowon/drivers/examples/scull/scull.ko /home/nowon/drivers/examples/scull/scull.o /home/nowon/drivers/examples/scull/scull.mod.o

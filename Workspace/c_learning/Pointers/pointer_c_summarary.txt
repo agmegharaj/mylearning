@@ -1,0 +1,13 @@
+to read pointer to function
+NuLL and void pointer
+structure binding
+
+
+
+1) basic in pointer to study full
+
+2) arrays to study full and also to see the heap memory video(come under this catagory).
+
+3) strings, to read full.
+
+4) pointers and structures, linked list(single and double), circular linked list, circular buffer, binary trees.reversing single linked list.

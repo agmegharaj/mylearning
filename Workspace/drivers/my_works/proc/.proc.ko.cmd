@@ -1,0 +1,1 @@
+cmd_/home/nowon/ubuntuone/drivers/my_works/proc/proc.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-3.2.0-29-generic/scripts/module-common.lds --build-id  -o /home/nowon/ubuntuone/drivers/my_works/proc/proc.ko /home/nowon/ubuntuone/drivers/my_works/proc/proc.o /home/nowon/ubuntuone/drivers/my_works/proc/proc.mod.o

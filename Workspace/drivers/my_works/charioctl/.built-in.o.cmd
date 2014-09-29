@@ -1,0 +1,1 @@
+cmd_/home/agmegharaj/ubuntuone/drivers/my_works/charioctl/built-in.o :=  rm -f /home/agmegharaj/ubuntuone/drivers/my_works/charioctl/built-in.o; ar rcsD /home/agmegharaj/ubuntuone/drivers/my_works/charioctl/built-in.o

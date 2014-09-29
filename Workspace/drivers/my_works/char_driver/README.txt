@@ -1,0 +1,1 @@
+THis is the modification of the main char driver, bit complicated as it contqains quantumand quantum sets and all. but this module many unwated things from the main kernel has been removed. just basic read and write has been kept
