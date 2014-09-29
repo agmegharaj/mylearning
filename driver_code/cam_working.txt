@@ -1,0 +1,123 @@
+camera working logs.
+
+^Croot@arm:~/pptech_dir# dmesg -c
+[   57.575103] s_power 1
+[   57.586151] MT9V115 beagle_cam_set_xclk 19200000
+[   57.586761] 
+[   57.586761]  mclk=172800000 xclk=19200000 xclksel=1 
+[   57.586822] omap3isp omap3isp: isp_set_xclk(): cam_xclka set to 19200000 Hz
+[   57.705993] s_ctrl
+[   57.706024] s_ctrl
+[   57.706054] s_ctrl
+[   57.706085] s_ctrl
+[   57.706298] ccdc_set_format
+[   57.706329] ccdc_try_format
+[   57.706359] ccdc_try_format
+[   57.706390] pad_source_of 300a
+[   57.706420] pad_source_of set to 300a
+[   57.706420] ccdc_try_format
+[   57.706481] ccdc_set_format
+[   57.706481] ccdc_try_format
+[   57.706512] ccdc_try_format
+[   57.706542] pad_source_of 2006
+[   57.706573] pad_source_of set to 200f
+[   57.706573] ccdc_try_format
+[   57.706634] ccdc_set_format
+[   57.706665] ccdc_try_format
+[   57.706695] pad_source_of 2006
+[   57.706726] pad_source_of set to 200f
+[   57.707000] s_power 0
+[   57.707031] MT9V115 beagle_cam_set_xclk 0
+[   57.707092] 
+[   57.707092]  mclk=172800000 xclk=0 xclksel=1 
+[   57.707122] omap3isp omap3isp: isp_set_xclk(): cam_xclka set to 0 Hz
+[   57.737915] s_power 1
+[   57.756011] MT9V115 beagle_cam_set_xclk 19200000
+[   57.756072] 
+[   57.756072]  mclk=172800000 xclk=19200000 xclksel=1 
+[   57.756134] omap3isp omap3isp: isp_set_xclk(): cam_xclka set to 19200000 Hz
+[   57.875823] s_ctrl
+[   57.875854] s_ctrl
+[   57.875885] s_ctrl
+[   57.875915] s_ctrl
+[   57.936248] omap3isp isp_video_streamon
+[   57.936340] ccdc_link_validate: src: 16 [0] sink: 5 [0]
+[   57.936370] verify format
+[   57.936401] verify graph_data
+[   57.936431] check_external_subdevs
+[   57.936462] validate_pipeline
+[   57.936553] omap3isp omap3isp: Output size[w/h]: 640x480
+[   57.936584] omap3isp omap3isp: Input size[w/h]: 638x479
+[   57.936614] omap3isp omap3isp: -------------Resizer Register dump----------
+[   57.936645] omap3isp omap3isp: ###RSZ PCR=0x00000004
+[   57.936706] omap3isp omap3isp: ###RSZ CNT=0x2093f4fc
+[   57.936737] omap3isp omap3isp: ###RSZ OUT_SIZE=0x01e00280
+[   57.936767] omap3isp omap3isp: ###RSZ IN_START=0x00000002
+[   57.936798] omap3isp omap3isp: ###RSZ IN_SIZE=0x01df027e
+[   57.936828] omap3isp omap3isp: ###RSZ SDR_INADD=0x00000000
+[   57.936859] omap3isp omap3isp: ###RSZ SDR_INOFF=0x00000000
+[   57.936889] omap3isp omap3isp: ###RSZ SDR_OUTADD=0x00001000
+[   57.936920] omap3isp omap3isp: ###RSZ SDR_OUTOFF=0x00000500
+[   57.936981] omap3isp omap3isp: ###RSZ YENH=0x00000000
+[   57.937011] omap3isp omap3isp: --------------------------------------------
+[   57.937072] omap3isp omap3isp: -------------CCDC Register dump-------------
+[   57.937103] omap3isp omap3isp: ###CCDC PCR=0x00000000
+[   57.937133] omap3isp omap3isp: ###CCDC SYN_MODE=0x00091700
+[   57.937164] omap3isp omap3isp: ###CCDC HD_VD_WID=0x00000000
+[   57.937194] omap3isp omap3isp: ###CCDC PIX_LINES=0x00000000
+[   57.937225] omap3isp omap3isp: ###CCDC HORZ_INFO=0x0000027f
+[   57.937255] omap3isp omap3isp: ###CCDC VERT_START=0x00000000
+[   57.937286] omap3isp omap3isp: ###CCDC VERT_LINES=0x000001df
+[   57.937347] omap3isp omap3isp: ###CCDC CULLING=0xffff00ff
+[   57.937377] omap3isp omap3isp: ###CCDC HSIZE_OFF=0x00000000
+[   57.937408] omap3isp omap3isp: ###CCDC SDOFST=0x00000000
+[   57.937438] omap3isp omap3isp: ###CCDC SDR_ADDR=0x00000000
+[   57.937469] omap3isp omap3isp: ###CCDC CLAMP=0x00000010
+[   57.937499] omap3isp omap3isp: ###CCDC DCSUB=0x00000000
+[   57.937561] omap3isp omap3isp: ###CCDC COLPTN=0xbb11bb11
+[   57.937622] omap3isp omap3isp: ###CCDC BLKCMP=0x00000000
+[   57.937652] omap3isp omap3isp: ###CCDC FPC=0x00000000
+[   57.937683] omap3isp omap3isp: ###CCDC FPC_ADDR=0x00000000
+[   57.937713] omap3isp omap3isp: ###CCDC VDINT=0x01de0140
+[   57.937744] omap3isp omap3isp: ###CCDC ALAW=0x00000006
+[   57.937774] omap3isp omap3isp: ###CCDC REC656IF=0x00000000
+[   57.937805] omap3isp omap3isp: ###CCDC CFG=0x00008800
+[   57.937835] omap3isp omap3isp: ###CCDC FMTCFG=0x0000e000
+[   57.937866] omap3isp omap3isp: ###CCDC FMT_HORZ=0x00000280
+[   57.937927] omap3isp omap3isp: ###CCDC FMT_VERT=0x000001e0
+[   57.937957] omap3isp omap3isp: ###CCDC PRGEVEN0=0x00000000
+[   57.937988] omap3isp omap3isp: ###CCDC PRGEVEN1=0x00000000
+[   57.938018] omap3isp omap3isp: ###CCDC PRGODD0=0x00000000
+[   57.938049] omap3isp omap3isp: ###CCDC PRGODD1=0x00000000
+[   57.938079] omap3isp omap3isp: ###CCDC VP_OUT=0x03be2800
+[   57.938110] omap3isp omap3isp: ###CCDC LSC_CONFIG=0x00006600
+[   57.938140] omap3isp omap3isp: ###CCDC LSC_INITIAL=0x00000000
+[   57.938171] omap3isp omap3isp: ###CCDC LSC_TABLE_BASE=0x00000000
+[   57.938232] omap3isp omap3isp: ###CCDC LSC_TABLE_OFFSET=0x00000000
+[   57.938262] omap3isp omap3isp: --------------------------------------------
+[   57.938293] s_stream 1
+[   57.955871] mt9v115, configure pll
+[   57.977050] mt9v115, pll locked value=A046
+[   57.978057] mt9v115 init sensor value=0000
+[   57.979034] mt9v115 reset_and_misc (1) value=0x344
+[   58.047363] mt9v115 checking standby state
+[   58.048370] 
+[   58.048370] mt9v115.c STANDBY REG=0x4
+[   58.049102] mt9v115 sending stop cmd mt9v115 start stream
+[   58.050689] mt9v115 state: 0x0000
+[   58.050720] mt9v115 sending streaming cmdmt9v115 state after start: 0x0000
+[   58.452117] omap3isp omap3isp: OMAP3 ISP AEWB: user wants to disable module.
+[   58.452178] omap3isp omap3isp: OMAP3 ISP AEWB: module is being disabled
+[   58.452209] omap3isp omap3isp: OMAP3 ISP AF: user wants to disable module.
+[   58.452270] omap3isp omap3isp: OMAP3 ISP AF: module is being disabled
+[   58.452301] omap3isp omap3isp: OMAP3 ISP histogram: user wants to disable module.
+[   58.452331] omap3isp omap3isp: OMAP3 ISP histogram: module is being disabled
+[   58.485382] s_stream 0
+[   58.533599] s_power 0
+[   58.533630] MT9V115 beagle_cam_set_xclk 0
+[   58.533691] 
+[   58.533691]  mclk=172800000 xclk=0 xclksel=1 
+[   58.533721] omap3isp omap3isp: isp_set_xclk(): cam_xclka set to 0 Hz
+root@arm:~/pptech_dir# 
+root@arm:~# 
+
